@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto17
+      java: corretto8
   pre_build:
     commands:
       - echo Just listing basic information about the environment
@@ -13,7 +13,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn clean package
+      - mvn clean package -X
   post_build:
     commands:
       - echo Build completed on `date`
