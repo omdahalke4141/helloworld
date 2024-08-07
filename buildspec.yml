@@ -25,7 +25,7 @@ phases:
       - ls -al
       - tar -zcvf ../target/HelloWorld.tar.gz *.*
       - cd ..
-      - printenv 
+      
 artifacts:
   files:
 # IMPORTANT
@@ -33,6 +33,6 @@ artifacts:
     - target/HelloWorld.tar.gz
 # Use the individual files if you are using the CodeDeploy from CodePipeline
 # Reason is pipeline does not untar and errors out saying that the appspec file is not there
-#    - appfiles/appspec.yml
-#    - appfiles/HelloWorld-1.war
+    - appfiles/appspec.yml
+    - appfiles/HelloWorld-1.war
   discard-paths: yes
